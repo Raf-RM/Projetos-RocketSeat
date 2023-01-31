@@ -55,7 +55,7 @@ footer #line {
   margin: 0 0 27px 0;
 }
 
-footer p {
+footer p, a {
   font-size: 14px;
   line-height: 28px;
 }
@@ -71,6 +71,12 @@ footer {
   right: 20%;
   left: 20%;
   bottom: 23px;
+}
+
+a:hover {
+  font-weight: bold;
+  color:#00BFA6;
+
 }
 
 h1, a, footer p{
