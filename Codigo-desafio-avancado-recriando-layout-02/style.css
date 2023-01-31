@@ -1,0 +1,38 @@
+body {
+  background: #2F2E41;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 64px;  
+}
+
+nav ul li {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+main {
+display: flex;
+text-align: center;
+}
+
+
+#footer {
+  align-items: center;
+}
+
+#padlock {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
