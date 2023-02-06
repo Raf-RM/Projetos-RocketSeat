@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Staatliches', cursive;*/
+
+h1, h2, legend {
+  font-family: 'Staatliches', cursive;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  color: #535971;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;  
+}
+
+span {
+  color: #C1BCCC;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 8px;
+}
+
+body {
+  background: #E5E5E5;
+}
+
+body .page {
+  width: 750px;
+  margin: auto;
+
+  color: #4E4958;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+body::before {
+  content: '';
+  background: #535971;
+  width: 100%;
+  height: 436px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1;
+}
+
+header {
+  margin: 140px 0 58px;
+  color: #FFFFFF;
+}
+
+header p {
+  margin-top: 18px;
+}
+
+form {
+  width: 750px;
+  padding: 64px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  background: #FFFFFF;
+  border-radius: 20px 20px 0px 0px;
+}
+
+
+form fieldset {
+  border: 0;
+  
+}
+
+form fieldset .fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form fieldset .fieldset-wrapper .input-wrapper,
+form fieldset .fieldset-wrapper .input-wrapper .indent-wrapper .wrapper-name,
+form fieldset .fieldset-wrapper .input-wrapper .indent-wrapper .wrapper-lastName {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form fieldset .fieldset-wrapper .input-wrapper .indent-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+
+}
+
+legend {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #E6E6F0;
+
+  margin-bottom: 36px;
+
+  color: #535971;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+input {
+  min-width: 300px;
+  height: 56px;
+
+  padding: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4E4958;
+
+  background: #FAFAFC;
+
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+
+  appearance: none;
+}
+
+form fieldset .fieldset-wrapper-mentoring {
+  width: 622px;
+  display: flex;
+  flex-direction: column;
+}
+
+form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time {
+  display: flex; 
+  gap: 32px;
+}
+
+form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-time {
+  display: flex;
+  gap: 10px;
+}
+
+form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-date input {
+  margin-top: 8px;
+}
+
+form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-time input {
+  min-width: 140px;
+  margin-top: 8px;
+}
+
+.input-wrapper-date-time + h2 {
+  margin-top: 16px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  background: #535971;
+
+  width: 750px;
+  height: 160px;
+
+  padding: 0 71px;
+  border-radius: 0px 0px 20px 20px;
+  margin-bottom: 366px;
+}
+
+footer input {
+  width: 100%;
+
+  font-family: 'Staatliches', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+
+  color: #FFFFFF;
+
+  background: #FF5374;
+  border: none;
+  border-radius: 20px;
+}
+
+footer input:hover {
+  background: #ca3d5a;
+  cursor: pointer;
+}
+
+span:hover {
+  color: #757378;
+}
