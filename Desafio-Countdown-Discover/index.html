@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
+  <!--defer SÓ VAI COMEÇAR A EXECUTAR O js QUANDO TODO O html ESTIVER MONTADO-->  
   <title>Discover | Countdown</title>
 </head>
 <body>
@@ -20,34 +21,34 @@
     <main>
       <div class="countdown">
         
-        <h1>Ready to launch in...</h1>
+        <h1 id="countdown-title">Ready to launch in...</h1>
         
-        <div class="timer">
+        <div class="timer" id="timer">
 
           <div class="days">
             <p id="label">Days</p>
-            <p id="value">08</p>
+            <p class="timer-value"id="daysLeft">08</p>
           </div>
 
           <p id="separator">:</p>
 
           <div class="hours">
             <p id="label">Hours</p>
-            <p id="value">12</p>
+            <p class=timer-value id="hoursLeft">12</p>
           </div>
 
           <p id="separator">:</p>
 
           <div class="minutes">
             <p id="label">Minutes</p>
-            <p id="value">44</p>
+            <p class="timer-value"id="minutesLeft">44</p>
           </div>
 
           <p id="separator">:</p>   
 
           <div class="seconds">
             <p id="label">seconds</p>
-            <p id="value">28</p>
+            <p class="timer-value" id="secondsLeft">28</p>
           </div>
         
         </div>
@@ -64,6 +65,7 @@
     <img id="topWave" src="./images/top-image.svg" alt="">
     <img id="bottonWave" src="./images/bottom-image.svg" alt="">
     
-  </div>  
+  </div>   
+
 </body>
 </html>
