@@ -8,42 +8,74 @@
   --font-title: 'Staatliches', cursive;
   --font-text: 'Palanquin', sans-serif;
 
-  --black: #000000;
-  --dark-purple: #23053A;
-  --dark-blue: #4A4E69;
-  --rock-blue: #8E9AAF;
-  --chatelle: #CBC0D3;
-  --dolomite-crystal: #FEEAFA;
-  --ghost-white: #EFF1FF;
-  --white: #ffffff;
+  --black: hsl(0, 0%, 0%);
+  --dark-purple: hsl(274, 84%, 12%);
+  --dark-blue: hsl(232, 17%, 35%);
+  --rock-blue: hsl(218, 17%, 62%);
+  --chatelle: hsl(275, 18%, 79%);
+  --dolomite-crystal: hsl(312, 91%, 96%);
+  --ghost-white: hsl(233, 100%, 97%);
+  --white: hsl(100, 100%, 100%);
 
   font-size: 62.5%;
+}
+.page {
+  min-width: 38.4rem;
 }
 
 main {
   width: 32.0rem;
-
-  margin: 1.4rem 3.2rem 6rem;
+  margin: 1.4rem auto;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-main .card {
+
+main .cards-wrapper .card {
   position: relative;
 }
 
-main .card + .card {
+main .cards-wrapper .card + .card {
   margin-top: 3.6rem;
 }
 
-main .card img {
+main .cards-wrapper .card img {
   width: 100%;
-  height: auto;
   object-fit: cover;
-
   border-radius: 2rem;
 }
+
+.card:nth-child(1) img {
+  height: 25rem;
+  animation: downtop-img 700ms 350ms backwards;
+}
+.card:nth-child(2) img {
+  height: 45rem;
+  animation: downtop-img 700ms 650ms backwards;
+}
+.card:nth-child(3) img {
+  height: 25rem;
+  animation: downtop-img 700ms 950ms backwards;
+}
+.card:nth-child(4) img {
+  height: 45rem;
+  animation: downtop-img 700ms 1250ms backwards;
+}
+
+.card:nth-child(1) h2 {
+  animation: topdown-text 700ms 650ms backwards;  
+}
+.card:nth-child(2) h2 {
+  animation: topdown-text 700ms 950ms backwards;  
+}
+.card:nth-child(3) h2 {
+  animation: topdown-text 700ms 1250ms backwards;  
+}
+.card:nth-child(4) h2 {
+  animation: topdown-text 700ms 1550ms backwards;  
+}
+
 
 h1, h2 {
   font-family: var(--font-title);
@@ -63,6 +95,8 @@ h1 {
 
   width: 100%;
   text-align: center;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);;
 }
 
 h2 {
@@ -70,8 +104,8 @@ h2 {
   font-size: 2rem;
 
   position: absolute;
-  top: 1.7rem;
-  right: 3.9rem;
+  top: 1.6rem;
+  right: 1.6rem;
 
   display: flex;
   align-items: center;
@@ -86,8 +120,8 @@ h2 {
 p {
   font-weight: 400;
   font-family: var(--font-text);
-  font-size: 20px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 16px;
 
   color: var(--dark-purple);
 
@@ -106,10 +140,33 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 header h1 {
   background-color: var(--chatelle);
 }
 
+@keyframes downtop-img {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
 
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes topdown-text {
+  0%{
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
