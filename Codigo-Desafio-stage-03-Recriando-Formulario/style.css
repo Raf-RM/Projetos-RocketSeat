@@ -129,7 +129,9 @@ legend {
   line-height: 34px;
 }
 
-input {
+.input-wrapper input, 
+.wrapper-date input,
+footer input {
   min-width: 300px;
   height: 56px;
 
@@ -169,55 +171,17 @@ form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-date
 }
 
 form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-time input {
-  min-width: 140px;
-  margin-top: 8px;
-}
-
-
-form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-date input {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-}
-form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-date .box {
-  display: block;
-  content: "";
-  min-width: 300px;
+  width: 140px;
   margin-top: 8px;
   height: 56px;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4E4958;
   background: #FAFAFC;
   border: 1px solid #E6E6F0;
-  border-radius: 8px;  
-}
-form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-date input:focus + .box {
-  outline: 2px solid black;
-}
-
-form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-time .box {
-  min-width: 140px;
-  display: block;
-  content: "";
-  margin-top: 8px;
-  height: 56px;
-  background: #FAFAFC;
-  border: 1px solid #E6E6F0;
-  border-radius: 8px; 
-}
-form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-time .begin input {
-  position: absolute;
-  right: 150px;
-  top: 24px;
-  opacity: 0;
-}
-form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-time .end input {
-  position: absolute;
-  right: 0px;
-  top: 24px;
-  opacity: 0;
-}
-form fieldset .fieldset-wrapper-mentoring .input-wrapper-date-time .wrapper-time input:focus + .box {
-  outline: 2px solid black;
+  border-radius: 8px;
+  appearance: none;
 }
 
 .input-wrapper-date-time + h2 {
@@ -260,4 +224,8 @@ footer input:hover {
 
 span:hover {
   color: #757378;
+}
+
+input:invalid {
+  outline: 1px solid red;
 }
