@@ -4,7 +4,108 @@
   box-sizing: border-box;
 }
 
-form fieldset #personal-info {
+:root {
+  --page-color: hsl(201, 41%, 82%);
+  --header-color: hsl(218, 23%, 21%);
+  --form-color1: hsl(6, 89%, 69%);
+  --form-color2: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 0%);
+  --input-color: hsl(240, 33%, 99%);
+  --input-border-color: hsl(240, 24%, 92%);
+}
+
+.page{
+  background: var(--page-color);
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background: var(--header-color);
+  height: 465px;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin-top: 107px;
+}
+
+header img {
+  margin-top: 24px;
+}
+
+header .rectangle {
+  background: var(--form-color1);
+  width: 750px;
+  height: 133px;
+  text-align: center;
+
+  margin-top: 32px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+form {
+  background: var(--form-color2);
+  width: 750px;
+
+  padding: 30px 64px 64px;
+  margin-bottom: 380px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper, .wrapper-nextEncounter {
+  display: flex;
+  gap: 22px;
+}
+
+.wrapper-name, .wrapper-lastName,
+.wrapper-email, .wrapper-feedback,
+.wrapper-mentorName, .wrapper-date,
+.wrapper-start, .wrapper-end {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-time{
+  display: flex;
+  gap: 10px;
+}
+
+.wrapper-checked {
+  display: flex;
+}
+
+.wrapper-name input, .wrapper-lastName input, 
+.wrapper-date input, .wrapper-mentorName select {
+  background: var(--input-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  width: 300px;
+  height: 56px;
+}
+
+.wrapper-email input {
+  background: var(--input-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  width: 622px;
+  height: 56px;
+}
+
+.wrapper-feedback textarea {
+  width: 622px;
+  height: 166px;
+  background: var(--input-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
 }

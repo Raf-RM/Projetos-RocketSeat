@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avalie Sua Mentoria</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page">
@@ -12,7 +13,7 @@
 
       <h1>Avalie a sua mentoria</h1>
       <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
-      <img src="#" alt="">
+      <img src="./images/img.svg" alt="">
       <div class="rectangle">
         <h2>Informações pessoais</h2>
       </div>
@@ -21,7 +22,7 @@
 
     <form action="">
 
-      <fieldset id="personal-info">
+      <fieldset>
         <legend>Informações Pessoais</legend>
 
         <div class="wrapper">
@@ -43,9 +44,60 @@
 
       </fieldset>
 
-      <fieldset>Informações do Mentor</fieldset>
+      <fieldset>
 
-      <fieldset>Agendando Próxima Mentoria</fieldset>
+        <div class="wrapper-label">
+          <legend>Informações do Mentor</legend>
+        </div>
+
+        <div class="wrapper-mentorName">
+          <label for="input-mentor">Selecione quem foi o seu mentor</label>
+          <select name="" id="input-mentor">
+            <option value="name">Fulano</option>
+            <option value="name">Ciclano</option>
+            <option value="name">Beutrano</option>
+          </select>
+        </div>
+
+        <div class="wrapper-feedback">
+          <label for="input-feedback">Feedback sobre o mentor</label>
+          <textarea name="input-feedback" id="input-feedback"></textarea>
+        </div>
+
+        <div class="wrapper-checked">
+          <input type="checkbox" name="input-checked" id="input-checked">
+          <p>Todas as minhas dúvidas foram esclarecidas durante a mentoria.</p>
+        </div>
+        </fieldset>
+
+      <fieldset>
+
+        <div class="wrapper-label">
+          <legend>Agendando Próxima Mentoria</legend>
+        </div>
+
+        <div class="wrapper-nextEncounter">
+
+          <div class="wrapper-date">
+            <label for="input-date">Data</label>
+            <input type="date" id="input-date"/>
+          </div>
+
+          <div class="wrapper-time">
+            <div class="wrapper-start">
+              <label for="input-start">Das</label>
+              <input type="time" id="input-start"/>
+            </div>
+  
+            <div class="wrapper-end">
+              <label for="input-end">Até</label>
+              <input type="time" id="input-end"/>
+            </div>
+          </div>
+
+        </div>
+
+      </fieldset>
 
       <input type="button" value="Salvar">
 
