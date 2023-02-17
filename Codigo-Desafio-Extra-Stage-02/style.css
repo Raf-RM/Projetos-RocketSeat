@@ -9,9 +9,21 @@
   --header-color: hsl(218, 23%, 21%);
   --form-color1: hsl(6, 89%, 69%);
   --form-color2: hsl(0, 0%, 100%);
-  --text-color: hsl(0, 0%, 0%);
+  --text-color: hsl(258, 9%, 32%);
   --input-color: hsl(240, 33%, 99%);
   --input-border-color: hsl(240, 24%, 92%);
+  --color-legend: hsl(210, 37%, 23%);
+  --color-border:1px solid hsl(240, 25%, 92%);
+  --color-span: hsl(258, 14%, 77%);
+
+
+
+  --font-titles: 'Staatliches', cursive;
+  --font-text: 'Poppins', sans-serif;
+}
+
+h1, h2, legend, .wrapper-button input  {
+  font-family: var(--font-titles);
 }
 
 .page{
@@ -19,6 +31,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  font-family: var(--font-text);
+  color: var(--text-color);
 }
 
 header {
@@ -29,10 +44,31 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  color: var(--input-color) ;
 }
 
 header h1 {
   margin-top: 107px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;  
+}
+
+header .rectangle {
+  padding: 50px 0px;
+}
+
+header h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;  
+}
+
+header p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;  
 }
 
 header img {
@@ -61,11 +97,55 @@ form {
 form fieldset {
   display: flex;
   flex-direction: column;
+  border: none;
+}
+
+legend {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--color-legend);  
+}
+
+input, select, textarea {
+  padding: 15px;
+  color: var(--text-color);
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--color-span);
+}
+
+.wrapper-label {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid hsl(240, 25%, 92%);
 }
 
 .wrapper, .wrapper-nextEncounter {
   display: flex;
   gap: 22px;
+}
+
+.wrapper {
+  margin-bottom: 16px;
+}
+
+.wrapper-email,
+.wrapper-mentorName, .wrapper-feedback,
+.wrapper-checked {
+  margin-bottom: 32px;
 }
 
 .wrapper-name, .wrapper-lastName,
@@ -74,11 +154,20 @@ form fieldset {
 .wrapper-start, .wrapper-end {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .wrapper-time{
   display: flex;
   gap: 10px;
+}
+
+.wrapper-start input, .wrapper-end input {
+  background: var(--input-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  width: 145px;
+  height: 56px;  
 }
 
 .wrapper-checked {
@@ -108,4 +197,15 @@ form fieldset {
   background: var(--input-color);
   border: 1px solid var(--input-border-color);
   border-radius: 8px;
+}
+
+.wrapper-button input {
+  margin-top: 64px;
+  width: 622px;
+  height: 51px;
+  background: var(--form-color1);
+  color: var(--input-color);
+  border: none;
+  border-radius: 8px;
+
 }
