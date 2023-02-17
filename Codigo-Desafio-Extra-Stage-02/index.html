@@ -60,7 +60,7 @@
 
         <div class="wrapper-mentorName">
           <label for="input-mentor">Selecione quem foi o seu mentor</label>
-          <select name="" id="input-mentor">
+          <select id="input-mentor">
             <option value="name">Fulano</option>
             <option value="name">Ciclano</option>
             <option value="name">Beutrano</option>
@@ -74,7 +74,7 @@
 
         <div class="wrapper-checked">
           <input type="checkbox" name="input-checked" id="input-checked">
-          <p>Todas as minhas dúvidas foram esclarecidas durante a mentoria.</p>
+          <label for="input-checked">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
         </div>
         </fieldset>
 
@@ -88,18 +88,18 @@
 
           <div class="wrapper-date">
             <label for="input-date">Data <span>(DD/MM/AAA)</span></label>
-            <input type="date" id="input-date"/>
+            <input type="text" id="input-date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" />
           </div>
 
           <div class="wrapper-time">
             <div class="wrapper-start">
               <label for="input-start">Das</label>
-              <input type="time" id="input-start"/>
+              <input type="text" id="input-start" onfocus="(this.type='time')" onblur="if(!this.value)this.type='text'" />
             </div>
   
             <div class="wrapper-end">
               <label for="input-end">Até</label>
-              <input type="time" id="input-end"/>
+              <input type="text" id="input-end" onfocus="(this.type='time')" onblur="if(!this.value)this.type='text'" />
             </div>
           </div>
 
@@ -107,9 +107,7 @@
 
       </fieldset>
 
-      <div class="wrapper-button">
-        <input type="button" value="Salvar">
-      </div>
+      <button>Salvar</button>  
 
     </form>
   
