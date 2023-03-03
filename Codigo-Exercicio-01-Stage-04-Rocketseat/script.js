@@ -19,7 +19,7 @@ let divi = Number(firstNum) / Number(secondNum)
 let rest = Number(firstNum) % Number(secondNum)
 
 let even = sum % 2 == 0
-let equals = Number(firstNum) === Number(secondNum)
+let equals = sub === 0
 
 alert(`O resultado de soma do primeiro valor mais o segundo é: ${sum}`)
 alert(`O resultado da subtração do primeiro valor menos o segundo é: ${sub}`)
