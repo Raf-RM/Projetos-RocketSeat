@@ -13,6 +13,9 @@ body {
   background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
   display: grid;
   align-items: center;
+
+  animation: backgroundChange 3s 350ms ease infinite;
+  background-size: 200% 200%;
 }
 
 .hide {
@@ -78,6 +81,8 @@ main .screen2 .wrapper .boxFortune {
   padding: 1rem 1rem;
 
   text-align: center;
+
+  animation: fortuneTextUp 3s 250ms backwards;
 }
 
 main .screen2 .wrapper .boxFortune p{
@@ -120,7 +125,13 @@ main .screen2 .wrapper button:hover{
   100%{transform: translate(0, 0) rotate(0deg);}
 }
 
-@keyframe fortuneTextUp {
-  0%{}
-  100%{}
+@keyframes fortuneTextUp {
+  0%{transform: translateY(16rem) scale(0);}
+  100%{transform: translateY(0rem) scale(1);}
+}
+
+@keyframes backgroundChange {
+	0%{background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
 }
