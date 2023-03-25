@@ -38,12 +38,6 @@ main {
   color: var(--timer-and-card-icon-unselected-color);  
 }
 
-.controls {
-  display: flex;
-  gap: 4rem;
-  cursor: pointer;
-}
-
 .sounds-wrapper {
   width: 30.8rem;
   height: 33.6rem;
@@ -57,8 +51,30 @@ main {
   justify-content: space-between;
 }
 
+button {
+  border: 0;
+  border-radius: 2.4rem;
+  background-color: var(--bg-card-unselected);
+}
+
 svg {
   cursor: pointer;
 }
 
+.selected {
+  background-color: var(--bg-card-selected);
+}
+.selected svg path{
+  fill: var(--bg-and-card-icon-selected-color);
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+  cursor: pointer;
+}
+
+.controls button {
+  background-color: transparent;
+}
 
