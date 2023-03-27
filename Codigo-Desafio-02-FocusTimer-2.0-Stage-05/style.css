@@ -26,6 +26,10 @@ main {
   width: 82rem;
 }
 
+button {
+  background-color: var(--bg-card-unselected);
+}
+
 .timer-wrapper {
   display: grid;
 }
@@ -36,6 +40,18 @@ main {
   font-size: 12.6rem;
   line-height: 14.8rem;
   color: var(--timer-and-card-icon-unselected-color);  
+}
+
+.controls {
+  align-self: start;
+  display: flex;
+  gap: 4rem;
+  cursor: pointer;
+}
+
+.controls button {
+  background-color: transparent;
+  border: 0;
 }
 
 .sounds-wrapper {
@@ -51,10 +67,10 @@ main {
   justify-content: space-between;
 }
 
-button {
+.column button {
   border: 0;
   border-radius: 2.4rem;
-  background-color: var(--bg-card-unselected);
+  height: 15.2rem;
 }
 
 svg {
@@ -68,13 +84,7 @@ svg {
   fill: var(--bg-and-card-icon-selected-color);
 }
 
-.controls {
-  display: flex;
-  gap: 4rem;
-  cursor: pointer;
-}
-
-.controls button {
-  background-color: transparent;
+.hide {
+  display: none;
 }
 
