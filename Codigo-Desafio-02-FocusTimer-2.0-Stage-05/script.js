@@ -8,6 +8,17 @@ const timer = Timer()
 const controls = Controls()
 const elements = Elements()
 
+elements.buttonCard1Selected.addEventListener('click', handleCard1Selected)
+elements.buttonCard2Selected.addEventListener('click', handleCard2Selected)
+elements.buttonCard3Selected.addEventListener('click', handleCard3Selected)
+elements.buttonCard4Selected.addEventListener('click', handleCard4Selected)
+
+elements.buttonMore.addEventListener('click', timer.handleButtonMore)
+elements.buttonLess.addEventListener('click', timer.handleButtonLess)
+
+elements.buttonPlay.addEventListener('click', handleButtonPlay)
+elements.buttonStop.addEventListener('click', handleButtonStop)
+
 function handleCard1Selected () {
   if(elements.buttonCard1Selected.classList.contains('selected')){
     sounds.stopSounds()
@@ -65,22 +76,14 @@ function handleCard4Selected () {
   sounds.pressButton()
 }
 
-elements.buttonCard1Selected.addEventListener('click', handleCard1Selected)
-elements.buttonCard2Selected.addEventListener('click', handleCard2Selected)
-elements.buttonCard3Selected.addEventListener('click', handleCard3Selected)
-elements.buttonCard4Selected.addEventListener('click', handleCard4Selected)
-
-elements.buttonMore.addEventListener('click', timer.handleButtonMore)
-elements.buttonLess.addEventListener('click', timer.handleButtonLess)
-
-elements.buttonPlay.addEventListener('click', function(){
+function handleButtonPlay(){
   timer.countdown()
   controls.toggle()
   sounds.pressButton()
-})
+}
 
-elements.buttonStop.addEventListener('click', function(){
+function handleButtonStop(){
   timer.stopCountdown()
   controls.toggle()
   sounds.pressButton()
-})
+}
