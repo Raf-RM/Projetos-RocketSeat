@@ -22,7 +22,7 @@ elements.buttonStop.addEventListener('click', handleButtonStop)
 function handleCard1Selected () {
   if(elements.buttonCard1Selected.classList.contains('selected')){
     sounds.stopSounds()
-    buttonCard1Selected.classList.remove('selected')
+    elements.buttonCard1Selected.classList.remove('selected')
     return
   } else{
     sounds.soundCard1()

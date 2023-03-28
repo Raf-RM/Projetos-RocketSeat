@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /*Light Mode*/
+  --bg-and-card-icon-selected-color: #FFFFFF;
+  --timer-and-card-icon-unselected-color: hsla(240, 6%, 21%, 1);
+  --bg-card-unselected: hsla(240, 9%, 89%, 1);
+  --bg-card-selected: hsla(194, 97%, 31%, 1);
+
+  /*Dark Mode*/
+  --dark-mode-background: hsla(240, 5%, 7%, 1);
+  --dark-mode-controls-icons: hsla(240, 7%, 78%, 1);
+  --dark-mode-card-unselected: hsla(240, 6%, 17%, 1);
+  --dark-mode-car-selected :hsla(195, 74%, 15%, 1);
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-auto-rows: 1fr 2fr;
+}
+
+main {
+  justify-self: center;
+  align-self: start;
+  display: flex;
+  justify-content: space-between;
+  width: 82rem;
+}
+
+button {
+  background-color: var(--bg-card-unselected);
+}
+
+.timer-wrapper {
+  display: grid;
+}
+
+.timer {
+  align-self: center;
+  display: flex;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  color: var(--timer-and-card-icon-unselected-color);  
+}
+
+.controls {
+  align-self: start;
+  display: flex;
+  gap: 4rem;
+  cursor: pointer;
+}
+
+.controls button {
+  background-color: transparent;
+  border: 0;
+}
+
+.sounds-wrapper {
+  width: 30.8rem;
+  height: 33.6rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 3.2rem;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column button {
+  border: 0;
+  border-radius: 2.4rem;
+  height: 15.2rem;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--bg-card-selected);
+}
+.selected svg path{
+  fill: var(--bg-and-card-icon-selected-color);
+}
+
+.hide {
+  display: none;
+}
+
+.mode {
+  background-color: transparent;
+  border: 0;
+  padding: 6rem 6rem;
+  align-self: start;
+  justify-self: end;
+}
