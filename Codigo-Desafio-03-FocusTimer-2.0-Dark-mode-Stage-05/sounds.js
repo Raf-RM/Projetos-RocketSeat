@@ -9,10 +9,33 @@ export default function() {
   const buttonPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true")
   const alarmTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
   
+  let volumeCard1 = document.querySelector('#volume-control-card1')
+  let volumeCard2 = document.querySelector('#volume-control-card2')
+  let volumeCard3 = document.querySelector('#volume-control-card3')
+  let volumeCard4 = document.querySelector('#volume-control-card4')
+  console.log(volumeCard1.value)
+
+  volumeCard1.addEventListener('change', function(e) {
+    soundCard1Selected.volume = e.currentTarget.value/100
+  })
+  volumeCard2.addEventListener('change', function(e) {
+    soundCard2Selected.volume = e.currentTarget.value/100
+  })
+  volumeCard3.addEventListener('change', function(e) {
+    soundCard3Selected.volume = e.currentTarget.value/100
+  })
+  volumeCard4.addEventListener('change', function(e) {
+    soundCard4Selected.volume = e.currentTarget.value/100
+  })
+
   soundCard1Selected.loop = true
   soundCard2Selected.loop = true
   soundCard3Selected.loop = true
   soundCard4Selected.loop = true
+  soundCard1Selected.volume = 0.5
+  soundCard2Selected.volume = 0.5
+  soundCard3Selected.volume = 0.5
+  soundCard4Selected.volume = 0.5
 
   function soundCard1() {
     soundCard1Selected.play()

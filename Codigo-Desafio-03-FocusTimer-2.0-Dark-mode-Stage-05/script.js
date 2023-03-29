@@ -98,13 +98,13 @@ function handleButtonLightMode() {
   elements.buttonLightMode.classList.add('hide')
   elements.backGroundBody.style.backgroundColor = 'hsla(240, 5%, 7%, 1)';
   elements.timerDisplayColor.style.color = '#FFFFFF';
+
   for(let i = 0; i <= 3 ; i++){
-    elements.buttonCardsModesColor[i].style.backgroundColor = 'hsla(240, 6%, 17%, 1)'
-  } 
+    elements.buttonCardsModesColor[i].classList.add('cards-dark-mode')
+  }
   for(let i = 2; i <= 11 ; i++){
     elements.buttonIconColor[i].setAttribute('fill', 'hsla(240, 7%, 78%, 1)')
   } 
-
 }
 
 function handleButtonDarkMode() {
@@ -113,9 +113,10 @@ function handleButtonDarkMode() {
   elements.buttonLightMode.classList.remove('hide')
   elements.backGroundBody.style.backgroundColor = '#FFFFFF';
   elements.timerDisplayColor.style.color = ' hsla(240, 6%, 21%, 1)';
+
   for(let i = 0; i <= 3 ; i++){
-    elements.buttonCardsModesColor[i].style.backgroundColor = 'hsla(240, 9%, 89%, 1)'
-  } 
+    elements.buttonCardsModesColor[i].classList.remove('cards-dark-mode')
+  }
   for(let i = 2; i <= 11 ; i++){
     elements.buttonIconColor[i].setAttribute('fill', 'hsla(240, 6%, 21%, 1)')
   }

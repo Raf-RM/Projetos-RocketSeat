@@ -56,6 +56,10 @@ button {
   align-self: start;
   display: flex;
   gap: 4rem;
+}
+
+.controls svg,
+.mode svg {
   cursor: pointer;
 }
 
@@ -80,10 +84,13 @@ button {
 .column button {
   border: 0;
   border-radius: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
   height: 15.2rem;
-}
-
-svg {
+  width: 13.8rem;
   cursor: pointer;
 }
 
@@ -104,4 +111,19 @@ svg {
   padding: 6rem 6rem;
   align-self: start;
   justify-self: end;
+}
+
+.cards-dark-mode {
+  background-color: var(--dark-mode-card-unselected);
+}
+.cards-dark-mode.selected {
+  background-color: var(--dark-mode-car-selected);
+}
+
+#volume-control-card1,
+#volume-control-card2,
+#volume-control-card3,
+#volume-control-card4 {
+  width: 9rem;
+
 }

@@ -45,7 +45,7 @@ export default function Timer() {
   }
   
   function handleButtonLess() {
-    if(minutes >= 5) {
+    if(minutes > 5) {
       newMinutes = minutes
       Elements().secondsDisplay.textContent = '00'
       newMinutes -= 5
