@@ -26,9 +26,11 @@ elements.buttonDarkMode.addEventListener('click', handleButtonDarkMode)
 function handleCard1Selected () {
   if(elements.buttonCard1Selected.classList.contains('selected')){
     sounds.stopSounds()
+    sounds.resetVolume()
     elements.buttonCard1Selected.classList.remove('selected')
     return
   } else{
+    sounds.resetVolume()
     sounds.soundCard1()
   }
   elements.buttonCard1Selected.classList.add('selected')
@@ -40,9 +42,11 @@ function handleCard1Selected () {
 function handleCard2Selected () {
   if(elements.buttonCard2Selected.classList.contains('selected')){
     sounds.stopSounds()
+    sounds.resetVolume()
     elements.buttonCard2Selected.classList.remove('selected')
     return
   } else{
+    sounds.resetVolume()
     sounds.soundCard2()
   }
   elements.buttonCard1Selected.classList.remove('selected')
@@ -54,9 +58,11 @@ function handleCard2Selected () {
 function handleCard3Selected () {
   if(elements.buttonCard3Selected.classList.contains('selected')){
     sounds.stopSounds()
+    sounds.resetVolume()
     elements.buttonCard3Selected.classList.remove('selected')
     return
   } else{
+    sounds.resetVolume()
     sounds.soundCard3()
   }
   elements.buttonCard1Selected.classList.remove('selected')
@@ -68,9 +74,11 @@ function handleCard3Selected () {
 function handleCard4Selected () {
   if(elements.buttonCard4Selected.classList.contains('selected')){
     sounds.stopSounds()
+    sounds.resetVolume()
     elements.buttonCard4Selected.classList.remove('selected')
     return
   } else{
+    sounds.resetVolume()
     sounds.soundCard4()
   }
   elements.buttonCard1Selected.classList.remove('selected')

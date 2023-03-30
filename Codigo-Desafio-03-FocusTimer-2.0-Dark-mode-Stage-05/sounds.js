@@ -13,7 +13,6 @@ export default function() {
   let volumeCard2 = document.querySelector('#volume-control-card2')
   let volumeCard3 = document.querySelector('#volume-control-card3')
   let volumeCard4 = document.querySelector('#volume-control-card4')
-  console.log(volumeCard1.value)
 
   volumeCard1.addEventListener('change', function(e) {
     soundCard1Selected.volume = e.currentTarget.value/100
@@ -28,16 +27,28 @@ export default function() {
     soundCard4Selected.volume = e.currentTarget.value/100
   })
 
+  //impedindo que o evento click ocorra para o slider
+  volumeCard1.addEventListener('click', function(event){
+    event.stopPropagation()
+  })
+  volumeCard2.addEventListener('click', function(event){
+    event.stopPropagation()
+  })
+  volumeCard3.addEventListener('click', function(event){
+    event.stopPropagation()
+  })
+  volumeCard4.addEventListener('click', function(event){
+    event.stopPropagation()
+  })
+
   soundCard1Selected.loop = true
   soundCard2Selected.loop = true
   soundCard3Selected.loop = true
   soundCard4Selected.loop = true
-  soundCard1Selected.volume = 0.5
-  soundCard2Selected.volume = 0.5
-  soundCard3Selected.volume = 0.5
-  soundCard4Selected.volume = 0.5
 
   function soundCard1() {
+    volumeCard1.value = 50
+    soundCard1Selected.volume = 0.5
     soundCard1Selected.play()
     soundCard2Selected.pause()
     soundCard3Selected.pause()
@@ -45,6 +56,8 @@ export default function() {
   }
 
   function soundCard2() {
+    volumeCard2.value = 50
+    soundCard2Selected.volume = 0.5
     soundCard1Selected.pause()
     soundCard2Selected.play()
     soundCard3Selected.pause()
@@ -52,6 +65,8 @@ export default function() {
   }
 
   function soundCard3() {
+    volumeCard3.value = 50
+    soundCard3Selected.volume = 0.5
     soundCard1Selected.pause()
     soundCard2Selected.pause()
     soundCard3Selected.play()
@@ -59,6 +74,8 @@ export default function() {
   }
 
   function soundCard4() {
+    volumeCard4.value = 50
+    soundCard4Selected.volume = 0.5
     soundCard1Selected.pause()
     soundCard2Selected.pause()
     soundCard3Selected.pause()
@@ -80,6 +97,13 @@ export default function() {
     alarmTimer.play()
   }
 
+  function resetVolume() {
+    volumeCard1.value = 0
+    volumeCard2.value = 0
+    volumeCard3.value = 0
+    volumeCard4.value = 0
+  }
+
   return {
     soundCard1,
     soundCard2,
@@ -88,5 +112,6 @@ export default function() {
     stopSounds,
     pressButton,
     timeIsEnd,
+    resetVolume,
   }
 }
