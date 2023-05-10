@@ -10,8 +10,12 @@
 }
 
 body {
-  background-image: url(images/mountains-universe-1.png);
-  background-size: cover;
+  /*background-image: url(images/mountains-universe-1.png);
+  background-size: cover;*/
+  position: relative;
+  padding-top: 4rem;
+  /* margin-left: 7.2rem; */
+  height: 100vh;
 }
 
 a {
@@ -41,20 +45,21 @@ nav {
   height: 4.0rem;
   display: flex;
   gap: 3.2rem;
-
-  align-items: center;
-
-  margin-top: 4rem;
   margin-left: 7.2rem;
+  align-items: center;
 }
 
 #app {
+
+}
+
+#app .contentPageHome {
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  gap: 2.4rem;
   align-items: center;
   justify-content: center;
-  gap: 2.4rem;
-  height: 100vh;
 }
 
 
@@ -83,3 +88,24 @@ a:hover {
   line-height: 2.2rem;
   color: #FFFFFF;  
 }
+
+#page {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#page img {
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 64.8rem;
+  margin-left: 10.2rem;
+  margin-top: 10.2rem;
+} 
+
