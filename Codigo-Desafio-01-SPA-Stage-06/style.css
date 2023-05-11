@@ -10,11 +10,8 @@
 }
 
 body {
-  /*background-image: url(images/mountains-universe-1.png);
-  background-size: cover;*/
   position: relative;
   padding-top: 4rem;
-  /* margin-left: 7.2rem; */
   height: 100vh;
 
   display: grid;
@@ -27,6 +24,7 @@ a {
   font-size: 2.17rem;
   line-height: 2.2rem;
   color: #C4C4CC;  
+  transition: 200ms;
 }
 
 p {
@@ -44,7 +42,7 @@ h1 {
 }
 
 nav {
-  width: 44.0rem;
+  width: 44.5rem;
   height: 4.0rem;
   display: flex;
   gap: 3.2rem;
@@ -56,8 +54,7 @@ nav {
   display: grid;
 }
 
-#app .contentPageHome {
-  
+#app .contentPageHome { 
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -81,13 +78,25 @@ button {
   line-height: 2.4rem;
 
   margin-bottom: 20rem;
+  transition: 200ms;
 }
 
 button:hover {
   cursor: pointer;
+  transform: scale(1.1);
+  transition: 200ms;
 }
 
 a:hover {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.2rem;
+  color: #FFFFFF;  
+  translate: all 3s;
+  transition: 200ms;
+}
+
+a:focus {
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 2.2rem;
@@ -111,6 +120,6 @@ a:hover {
   gap: 1.6rem;
   width: 64.8rem;
   margin-left: 10.2rem;
-  /* margin-top: 10.2rem; */
 } 
+
 
