@@ -87,20 +87,12 @@ button:hover {
   transition: 200ms;
 }
 
-a:hover {
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 2.2rem;
-  color: #FFFFFF;  
-  translate: all 3s;
-  transition: 200ms;
-}
-
 a:focus {
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 2.2rem;
   color: #FFFFFF;  
+  outline: 0;
 }
 
 #page {

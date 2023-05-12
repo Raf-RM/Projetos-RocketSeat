@@ -16,6 +16,8 @@ export class Router {
   handle() {
     const {pathname} = window.location
     const route = this.routes[pathname]
+    const inFocus = document.getElementById(pathname)
+    inFocus.focus()
   
     fetch(route)
     .then(data => data.text())
