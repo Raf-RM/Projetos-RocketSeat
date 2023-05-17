@@ -16,6 +16,8 @@ body {
 
   display: grid;
   grid-template-rows: 1fr 5fr;
+
+  /* font-size: 1.6rem; */
 }
 
 a {
@@ -84,7 +86,6 @@ button {
 button:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 200ms;
 }
 
 a:focus {

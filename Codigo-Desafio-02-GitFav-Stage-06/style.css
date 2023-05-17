@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+
+  --bg-collor: hsla(0, 0%, 0%, 1);
+  --h1-header: hsla(0, 0%, 100%, 1);
+  --pc-header: hsla(191, 65%, 7%, 1);
+  --bc-header: hsla(195, 91%, 25%, 1);
+  --ptc-header: hsla(240, 6%, 51%, 1);
+
+
+  --tc-border: hsla(191, 31%, 42%, 1);
+  --tc-body: hsla(192, 63%, 3%, 1);
+  --tc-header: hsla(194, 72%, 13%, 1);
+  --tbc-body: hsla(355, 91%, 66%, 1);
+  --tc-text: hsla(240, 9%, 89%, 1);
+
+
+}
+
+body {
+  background-color: var(--bg-collor);
+  font-size: 1.6rem;
+  font-family: var(--ff-primary);
+
+  color: var(--h1-header);
+}
+
+#app {
+max-width: 90rem;
+margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+}
+
+.left-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.right-wrapper {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.right-wrapper input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+
+  background-color: var(--pc-header);
+  color: var(--ptc-header);
+
+  width: 32rem;
+  padding: 1.6rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.right-wrapper button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;  
+
+  display: flex;
+  gap: 0.8rem;
+
+  background-color: var(--bc-header);
+  color: var(--h1-header);
+
+  padding: 1.2rem 3.2rem;
+  
+  border: none;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+
+.right-wrapper button span {
+  font-size: 2.2rem;
+}
+
+table {
+  width: 100%;
+  border: 1px solid var(--tc-border);
+  border-collapse: collapse;
+  
+
+  background-color: var(--tc-body);
+
+  color: var(--tc-text);
+}
+
+table .user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+table thead {
+  background-color: hsla(194, 72%, 13%, 1);
+  text-align: left;
+}
+
+table th, td {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.0rem;
+  line-height: 160%;
+
+  padding: 1.6rem 4rem;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td button.remove {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.0rem;
+  line-height: 160%;
+
+  background: none;
+  border: none;
+  color: var(--tbc-body);
+
+  cursor: pointer;
+}
+
+td.user a {
+  color: var(--tc-text);
+  text-decoration: none;
+}
+
+td.user span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;  
+}
+
+/* thead th:first-child {
+  border-top-left-radius: 1.2rem;
+} */
+
+
+
+
+
