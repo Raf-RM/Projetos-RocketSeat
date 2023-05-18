@@ -21,6 +21,8 @@
   --tc-header: hsla(194, 72%, 13%, 1);
   --tbc-body: hsla(355, 91%, 66%, 1);
   --tc-text: hsla(240, 9%, 89%, 1);
+  --tc-odd-row: hsla(192, 65%, 7%, 1);
+
 
 
 }
@@ -88,6 +90,11 @@ header {
   border-radius: 0.5rem;
 
   cursor: pointer;
+  transition: .2s;
+}
+
+.right-wrapper button:hover {
+  filter: brightness(1.2);
 }
 
 .right-wrapper button span {
@@ -96,13 +103,19 @@ header {
 
 table {
   width: 100%;
-  border: 1px solid var(--tc-border);
-  border-collapse: collapse;
   
+  border-collapse: collapse;
+  border: 1px solid var(--tc-border);
+  
+  overflow: hidden;  
 
   background-color: var(--tc-body);
 
   color: var(--tc-text);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--tc-odd-row);
 }
 
 table .user img {
@@ -113,7 +126,7 @@ table .user img {
 }
 
 table thead {
-  background-color: hsla(194, 72%, 13%, 1);
+  background-color: var(--tc-header);
   text-align: left;
 }
 
@@ -160,6 +173,8 @@ td.user span {
 /* thead th:first-child {
   border-top-left-radius: 1.2rem;
 } */
+
+
 
 
 
