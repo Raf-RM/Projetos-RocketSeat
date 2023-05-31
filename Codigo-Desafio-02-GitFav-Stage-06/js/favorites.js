@@ -1,15 +1,4 @@
-export class GithubUser {
-  static search(username) {
-    const endpoint = `https://api.github.com/users/${username}`
-  
-    return fetch(endpoint).then(data => data.json()).then(({login, name, public_repos, followers}) => ({
-      login,
-      name,
-      public_repos,
-      followers
-    }))
-  }
-}
+import { GithubUser } from "./GithubUser.js"
 
 //Classe para lidar com os dados
 export class Favorites {
@@ -23,10 +12,15 @@ export class Favorites {
     const dataFiltered = this.data.filter(entry => entry.login !== user.login)
     this.data = dataFiltered
     this.update()
+    this.save()
   }
 
   load() {
     this.data = JSON.parse(localStorage.getItem('github-favorites')) || []
+  }
+
+  save() {
+    localStorage.setItem('github-favorites', JSON.stringify(this.data))
   }
 
 }
@@ -37,6 +31,43 @@ export class FavoritesView extends Favorites {
     super(root)
     this.tbody = this.root.querySelector('tbody')
     this.update()
+    this.onadd()
+  }
+
+  async add(username) {
+    try {
+
+      const userExists = this.data.find(user => user.login.toUpperCase() === username.toUpperCase())
+      
+
+      if (userExists) {
+        throw new Error('Usuário já cadastrado!')
+      }
+
+      const user = await GithubUser.search(username)
+
+      if(user.login === undefined) {
+        throw new Error('Usuário não encontrado!')
+      }
+      
+      this.data = [user, ...this.data]
+      this.update()
+      this.save()
+
+    } 
+    catch(error) {
+      alert(error.message)
+    }
+  }
+
+  onadd() {
+    const addButton = this.root.querySelector('.right-wrapper button')
+    addButton.onclick = () => {
+      const {value} = this.root.querySelector('.right-wrapper input')
+
+      this.add(value)
+    }
+    
   }
 
   update() {
