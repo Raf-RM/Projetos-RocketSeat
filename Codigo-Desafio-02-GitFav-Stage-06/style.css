@@ -36,7 +36,7 @@ body {
 }
 
 #app {
-max-width: 90rem;
+max-width: 112rem;
 margin: 0 auto;
 }
 
@@ -101,16 +101,57 @@ header {
   font-size: 2.2rem;
 }
 
-table {
-  width: 100%;
-  
-  border-collapse: collapse;
+.table-container-all {
+  border-radius: 1.2rem;
   border: 1px solid var(--tc-border);
+  overflow: hidden; 
+}
+
+.head-table {
+  background-color: var(--tc-header);
+  text-align: left;
+  display: flex;
+}
+.head-table p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.0rem;
+  line-height: 160%;
+
+  padding: 1.6rem 4rem;
+}
+
+.head-table p:first-child {
+  width: 46.4rem;
+}
+
+.table-wrapper {
+  max-height: 63.8rem;
+  overflow-y: scroll;
+  /* border-radius: 1.2rem;
+  border: 1px solid var(--tc-border); */
+}
+
+.table-wrapper::-webkit-scrollbar {
+  width: .6rem;  
+  margin-right: 3rem;
   
-  overflow: hidden;  
+}
 
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: var(--tc-border);
+  height: 1.2rem;
+  border-radius: 1rem;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+table {
+  width: 100%;  
+  border-collapse: collapse;
   background-color: var(--tc-body);
-
   color: var(--tc-text);
 }
 
@@ -125,17 +166,11 @@ table .user img {
   border-radius: 50%;
 }
 
-table thead {
-  background-color: var(--tc-header);
-  text-align: left;
-}
-
 table th, td {
   font-style: normal;
   font-weight: 700;
   font-size: 2.0rem;
   line-height: 160%;
-
   padding: 1.6rem 4rem;
 }
 
@@ -143,19 +178,6 @@ td.user {
   display: flex;
   align-items: center;
   gap: 1.6rem;
-}
-
-td button.remove {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2.0rem;
-  line-height: 160%;
-
-  background: none;
-  border: none;
-  color: var(--tbc-body);
-
-  cursor: pointer;
 }
 
 td.user a {
@@ -168,6 +190,20 @@ td.user span {
   font-weight: 400;
   font-size: 20px;
   line-height: 160%;  
+}
+
+
+td button.remove {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.0rem;
+  line-height: 160%;
+
+  background: none;
+  border: none;
+  color: var(--tbc-body);
+
+  cursor: pointer;
 }
 
 /* thead th:first-child {
