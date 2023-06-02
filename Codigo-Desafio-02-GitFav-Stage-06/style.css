@@ -6,7 +6,6 @@
 
 :root {
   font-size: 62.5%;
-
   --ff-primary: 'Roboto', sans-serif;
 
   --bg-collor: hsla(0, 0%, 0%, 1);
@@ -15,15 +14,12 @@
   --bc-header: hsla(195, 91%, 25%, 1);
   --ptc-header: hsla(240, 6%, 51%, 1);
 
-
   --tc-border: hsla(191, 31%, 42%, 1);
   --tc-body: hsla(192, 63%, 3%, 1);
   --tc-header: hsla(194, 72%, 13%, 1);
   --tbc-body: hsla(355, 91%, 66%, 1);
   --tc-text: hsla(240, 9%, 89%, 1);
   --tc-odd-row: hsla(192, 65%, 7%, 1);
-
-
 
 }
 
@@ -117,35 +113,33 @@ header {
   font-weight: 700;
   font-size: 2.0rem;
   line-height: 160%;
-
-  padding: 1.6rem 4rem;
 }
-
-.head-table p:first-child {
-  width: 46.4rem;
+.head-table p:nth-child(1){
+  padding: 1.6rem 35.5rem 1.6rem 4rem;
+}
+.head-table p:nth-child(2){
+  padding: 1.6rem 5.4rem 1.6rem 4rem;
+}
+.head-table p:nth-child(3){
+  padding: 1.6rem 11rem 1.6rem 4rem;
+}
+.head-table p:nth-child(4){
+  padding: 1.6rem 9.2rem 1.6rem 4rem;
 }
 
 .table-wrapper {
-  max-height: 63.8rem;
-  overflow-y: scroll;
-  /* border-radius: 1.2rem;
-  border: 1px solid var(--tc-border); */
+  max-height: 57rem;
+  overflow-y: overlay;
 }
 
 .table-wrapper::-webkit-scrollbar {
-  width: .6rem;  
-  margin-right: 3rem;
-  
+  width: 2rem;    
 }
 
 .table-wrapper::-webkit-scrollbar-thumb {
-  background: var(--tc-border);
-  height: 1.2rem;
-  border-radius: 1rem;
-}
-
-.table-wrapper::-webkit-scrollbar-track {
-  background: transparent;
+  box-shadow: inset 0 0 1rem 1rem var(--tc-border);
+  border: solid .7rem transparent;
+  border-radius: 2rem;
 }
 
 table {
@@ -171,7 +165,18 @@ table th, td {
   font-weight: 700;
   font-size: 2.0rem;
   line-height: 160%;
-  padding: 1.6rem 4rem;
+}
+table td:nth-child(1) {
+  padding: 1.6rem 8rem 1.6rem 4rem;
+}
+table td:nth-child(2) {
+  padding: 1.6rem 10.9rem 1.6rem 4rem;
+}
+table td:nth-child(3) {
+  padding: 1.6rem 10.9rem 1.6rem 4rem;
+}
+table td:nth-child(4) {
+  padding: 1.6rem 5.3rem 1.6rem 4rem;
 }
 
 td.user {
@@ -206,13 +211,16 @@ td button.remove {
   cursor: pointer;
 }
 
-/* thead th:first-child {
-  border-top-left-radius: 1.2rem;
-} */
 
+.hide {
+  display: none;
+}
 
+.empty-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-
-
-
+  height: 62.4rem;
+  background-color: var(--tc-body);
+}
