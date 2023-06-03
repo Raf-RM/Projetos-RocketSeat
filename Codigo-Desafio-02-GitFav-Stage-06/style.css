@@ -21,6 +21,8 @@
   --tc-text: hsla(240, 9%, 89%, 1);
   --tc-odd-row: hsla(192, 65%, 7%, 1);
 
+  --star-color: hsla(189, 4%, 32%, 1);
+
 }
 
 body {
@@ -212,15 +214,25 @@ td button.remove {
 }
 
 
-.hide {
-  display: none;
-}
-
 .empty-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 6rem;
 
   height: 62.4rem;
   background-color: var(--tc-body);
+  padding-bottom: 9rem;
+}
+
+.empty-list h2 {
+  letter-spacing: .2rem;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 2.5rem; 
+  color: var(--star-color);
+}
+
+.hide {
+  display: none;
 }

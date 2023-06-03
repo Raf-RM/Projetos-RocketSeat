@@ -13,16 +13,32 @@ export class Favorites {
     this.data = dataFiltered
     this.update()
     this.save()
+    this.isEmptyListScreen()
   }
 
   load() {
     this.data = JSON.parse(localStorage.getItem('github-favorites')) || []
+    this.isEmptyListScreen()
   }
 
   save() {
     localStorage.setItem('github-favorites', JSON.stringify(this.data))
+    this.isEmptyListScreen()
   }
 
+  isEmptyListScreen() {    
+    const emptyList = this.root.querySelector('.empty-list');
+    const tableWrapper = this.root.querySelector('.table-wrapper');
+
+    if (JSON.stringify(this.data).length == 2) { 
+      emptyList.classList.remove('hide');
+      tableWrapper.classList.add('hide')
+    }
+    else {
+      emptyList.classList.add('hide');
+      tableWrapper.classList.remove('hide')
+    }
+  }
 }
 
 //Classe para lidar com a visualização
@@ -78,7 +94,7 @@ export class FavoritesView extends Favorites {
 
       row.querySelector('.user img').src = `https://github.com/${user.login}.png`
       row.querySelector('.user img').alt = `Imagem de ${user.login}`
-      row.querySelector('.user a').src = `https://github.com/${user.login}`
+      row.querySelector('.user a').href = `https://github.com/${user.login}`
       row.querySelector('.user p').textContent = `${user.name}`
       row.querySelector('.user span').textContent = `/${user.login}`
       row.querySelector('.repositories').textContent = `${user.public_repos}`
