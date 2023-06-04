@@ -77,11 +77,19 @@ export class FavoritesView extends Favorites {
   }
 
   onadd() {
+    // const addButton = this.root.querySelector('.right-wrapper button')
+    // addButton.onclick = () => {
+    //   let {value} = this.root.querySelector('.right-wrapper input')
+
+    //   this.add(value)
+
     const addButton = this.root.querySelector('.right-wrapper button')
     addButton.onclick = () => {
-      const {value} = this.root.querySelector('.right-wrapper input')
+      const inputValue = this.root.querySelector('.right-wrapper input')
 
-      this.add(value)
+      this.add(inputValue.value)
+      inputValue.value = ''
+
     }
     
   }
