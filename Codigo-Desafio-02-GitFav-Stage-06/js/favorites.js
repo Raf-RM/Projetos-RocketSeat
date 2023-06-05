@@ -29,14 +29,17 @@ export class Favorites {
   isEmptyListScreen() {    
     const emptyList = this.root.querySelector('.empty-list');
     const tableWrapper = this.root.querySelector('.table-wrapper');
+    const tableHead = this.root.querySelector('#tableHead');
 
     if (JSON.stringify(this.data).length == 2) { 
       emptyList.classList.remove('hide');
+      tableHead.classList.remove('hide');
       tableWrapper.classList.add('hide')
     }
     else {
       emptyList.classList.add('hide');
-      tableWrapper.classList.remove('hide')
+      tableHead.classList.add('hide');
+      tableWrapper.classList.remove('hide');
     }
   }
 }
@@ -77,22 +80,22 @@ export class FavoritesView extends Favorites {
   }
 
   onadd() {
-    // const addButton = this.root.querySelector('.right-wrapper button')
-    // addButton.onclick = () => {
-    //   let {value} = this.root.querySelector('.right-wrapper input')
-
-    //   this.add(value)
-
     const addButton = this.root.querySelector('.right-wrapper button')
+    const inputValue = this.root.querySelector('.right-wrapper input')
+    
+    inputValue.addEventListener('keydown', event => {
+      if (event.key === 'Enter' & inputValue.value !== '') {
+        this.add(inputValue.value)
+        inputValue.value = ''
+      }
+    })
+    
     addButton.onclick = () => {
-      const inputValue = this.root.querySelector('.right-wrapper input')
-
       this.add(inputValue.value)
       inputValue.value = ''
-
-    }
-    
+    }    
   }
+
 
   update() {
     this.removeAllTr()
