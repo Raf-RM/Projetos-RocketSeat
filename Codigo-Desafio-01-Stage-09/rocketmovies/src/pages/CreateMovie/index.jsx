@@ -7,6 +7,8 @@ import { Input } from '../../components/Input';
 import { TextArea } from '../../components/TextArea';
 import { ButtonText } from "../../components/ButtonText";
 import { Button } from '../../components/Button';
+import { MovieItem } from '../../components/MovieItem';
+import { Section } from '../../components/Section';
 
 export function CreateMovie(){
   return(
@@ -24,14 +26,14 @@ export function CreateMovie(){
             <Input placeholder="Sua nota (de 0 a 5)" />
           </div>
           <TextArea placeholder="Observações" />
-          <section>
-            <h2>Marcadores</h2>
-            <div>
-              <div className="tags">
-
-              </div>
+          <Section title="Marcadores">
+            <div className="tags">
+              <MovieItem  value="Terror"/>
+              <MovieItem  value="Suspense"/>
+              <MovieItem  value="Ficção"/>
+              <MovieItem placeholder="Novo marcador" isNew/>
             </div>
-          </section>
+          </Section>
           <div>
             <Button label="Excluir filme" />
             <Button label="Salvar alterações" />

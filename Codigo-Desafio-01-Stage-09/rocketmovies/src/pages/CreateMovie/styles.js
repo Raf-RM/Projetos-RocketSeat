@@ -44,20 +44,16 @@ export const Form = styled.form`
     }
   }
 
+  > Section {
+    > div {
+        display: flex;
 
-  >section {
-    
-    h2 {
-      font-size: 20px;
-      font-weight: 400;
-      color: ${({theme})=>theme.COLORS.GRAY_100};
-    }
-    div {
-      min-height: 88px;
-      background-color: ${({theme})=>theme.COLORS.BACKGROUND_900};
-      border-radius: 8px;
-      margin-top: 24px;
-      padding: 16px;
+        gap: 24px;
+        flex-wrap: wrap;
+        background-color: ${({theme})=>theme.COLORS.BACKGROUND_900};
+        border-radius: 8px;
+        margin-top: 24px;
+        padding: 16px;
     }
   }
 `;
