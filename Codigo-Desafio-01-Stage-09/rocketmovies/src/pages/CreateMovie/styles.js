@@ -33,6 +33,11 @@ export const Container = styled.div`
 export const Form = styled.form`
   display: grid;
   gap: 40px;
+
+  > h1 {
+    font-size: 36px;
+    font-weight: 500;
+  }
   
   > div {
     display: flex;
