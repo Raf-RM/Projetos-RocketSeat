@@ -1,6 +1,7 @@
 import { Container, Profile } from "./styles";
 
 import { Input } from "../Input";
+import { ButtonText } from "../ButtonText";
 
 export function Header(){
   return(
@@ -10,7 +11,7 @@ export function Header(){
       <Profile>
         <div>
           <span>Rafael Rodrigues Mateus</span>
-          <p>sair</p>
+          <ButtonText label="sair"/>
         </div>
 
         <img src="https://github.com/Raf-RM.png" alt="Foto github usuário Raf-RM" />
