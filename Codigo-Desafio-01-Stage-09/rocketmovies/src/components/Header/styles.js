@@ -11,7 +11,8 @@ export const Container=styled.header`
   padding: 0 123px;
 
   width: 100%;
-  border-bottom: 1px solid ${({theme})=>theme.COLORS.GRAY_100};
+  border-bottom: 1px solid ${({theme})=>theme.COLORS.GRAY_200};
+  margin-bottom: 40px;
 
   > h1 {
     margin-right: 64px;

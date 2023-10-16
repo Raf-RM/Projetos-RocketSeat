@@ -1,8 +1,9 @@
 import { Container } from "./styles";
 
-export function ButtonText({label, ...rest}){
+export function ButtonText({isActive=false, icon:Icon, label, ...rest}){
   return(
-    <Container type="button" {...rest} >
+    <Container type="button" $isactive={isActive} {...rest} >
+      {Icon && <Icon/>}
       {label}
     </Container>
   )
