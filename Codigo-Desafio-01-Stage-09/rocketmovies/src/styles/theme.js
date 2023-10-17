@@ -9,6 +9,8 @@ export default {
     
     GRAY:"#999591",
 
+    PURPLE: "#312E38",
+
     BROWN:"rgba(255, 133, 155, 0.05)",
 
     PINK:"#FF859B",

@@ -30,13 +30,11 @@ export const Profile=styled.div`
   > div {
     text-align: end;
     
-    span {
+    > span {
       font-size: 14px;
       font-weight: bold;
       white-space: nowrap;
-    }
-
-    
+    }  
   }
 
   > img {

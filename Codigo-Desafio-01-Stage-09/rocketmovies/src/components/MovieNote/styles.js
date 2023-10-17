@@ -20,4 +20,19 @@ export const Container = styled.div`
       -webkit-line-clamp: 2; 
       -webkit-box-orient: vertical;
   }
+
+  >footer{
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    
+  }
+`;
+
+export const Rating = styled.div`
+  margin: 8px 0 10px;
+  > svg {
+    color: ${({theme})=>theme.COLORS.PINK};
+  }
 `;
