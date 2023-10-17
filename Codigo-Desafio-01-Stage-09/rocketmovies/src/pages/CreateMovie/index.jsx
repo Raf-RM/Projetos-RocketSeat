@@ -15,8 +15,12 @@ export function CreateMovie(){
     <Container>
       <Header/>
       <ReturnButton>
+          {/* <FiArrowLeft/>
+          <ButtonText $isactive label="Voltar"/> */}
+        <a href="/">
           <FiArrowLeft/>
-          <ButtonText $isactive label="Voltar"/>
+          Voltar
+        </a>            
       </ReturnButton>
       <main>
         <Form>

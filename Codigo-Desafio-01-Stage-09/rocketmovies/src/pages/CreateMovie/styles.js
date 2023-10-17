@@ -13,6 +13,18 @@ export const Container = styled.div`
   //top: 0;
   //overflow: hidden;
 
+  /* > a {
+    padding: 40px 123px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    > svg {
+      color: ${({theme})=>theme.COLORS.PINK};
+      margin-right: 8px;
+    }
+
+  } */
 
   > main {
     display: grid;
@@ -67,12 +79,13 @@ export const ReturnButton = styled.div`
   padding: 40px 123px;
   display: flex;
   align-items: center;
-  font-size: 16px;
-  font-weight: 400;
 
-  button {
+  a {
     font-size: 16px;
+    font-weight: 400;
+    color: ${({theme})=>theme.COLORS.PINK};    
   }
+
   svg {
     color: ${({theme})=>theme.COLORS.PINK};
     margin-right: 8px;
