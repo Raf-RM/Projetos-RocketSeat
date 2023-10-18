@@ -5,7 +5,6 @@ import { Container, Form, ReturnButton} from "./styles";
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { TextArea } from '../../components/TextArea';
-import { ButtonText } from "../../components/ButtonText";
 import { Button } from '../../components/Button';
 import { MovieItem } from '../../components/MovieItem';
 import { Section } from '../../components/Section';
@@ -15,10 +14,8 @@ export function CreateMovie(){
     <Container>
       <Header/>
       <ReturnButton>
-          {/* <FiArrowLeft/>
-          <ButtonText $isactive label="Voltar"/> */}
+      <FiArrowLeft/>
         <a href="/">
-          <FiArrowLeft/>
           Voltar
         </a>            
       </ReturnButton>

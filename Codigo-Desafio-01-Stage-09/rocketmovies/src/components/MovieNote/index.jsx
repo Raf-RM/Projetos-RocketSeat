@@ -9,7 +9,7 @@ export function MovieNote({ data, ...rest}){
       <h2>{data.title}</h2>
       
       <Rating>
-        <IoMdStar/><IoMdStar/><IoMdStar/><IoMdStar/><IoMdStarOutline/>
+        <IoMdStar/> <IoMdStar/> <IoMdStar/> <IoMdStar/> <IoMdStarOutline/>
       </Rating>
 
       <p>{data.description}</p>
