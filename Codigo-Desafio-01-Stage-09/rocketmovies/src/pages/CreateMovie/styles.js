@@ -5,25 +5,14 @@ export const Container = styled.div`
   height: 100vh;
   display: grid;
   grid-template-rows: 116px auto;
-  grid-template-areas: 
-    "header" 
-    "content";
+  padding-bottom: 40px;
 
   > main {
     display: grid;
     padding: 0 123px;
     overflow-y: auto;
-    margin-bottom: 85px;
-
-    > Form {
-      max-height: 700px;
-      display: grid;
-      overflow-y: auto;
-      scrollbar-color: ${({theme})=>theme.COLORS.PINK} transparent ;
-
-    }
+    scrollbar-color: ${({theme})=>theme.COLORS.PINK} transparent ;
   }
-
 `;
 
 export const Form = styled.form`
@@ -48,7 +37,6 @@ export const Form = styled.form`
   > Section {
     > div {
         display: flex;
-
         gap: 24px;
         flex-wrap: wrap;
         background-color: ${({theme})=>theme.COLORS.BACKGROUND_900};

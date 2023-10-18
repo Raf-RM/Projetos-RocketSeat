@@ -3,61 +3,20 @@ import styled from 'styled-components';
 export const Container=styled.div`
   width: 100%;
   height: 100vh;
-  //grid-template-rows: 116px auto;
-  //grid-template-areas: "header" "content";
+  display: grid;
+  grid-template-rows: 116px auto;
+  padding-bottom: 40px;
 
   > main {
-    width: 100%;
-    height: 100vh;
-    padding: 0 123px;
-
-    > header {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin: 24px auto;
-
-      h2 {
-        font-size: 36px;
-        font-weight: 500;
-        color: ${({theme})=>theme.COLORS.WHITE};
-      }
-
-      svg {
-        margin-top: 6px;
-        font-size: 25px;
-        color: ${({theme})=>theme.COLORS.PINK};
-      }
-    }
-    
-    > div {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 24px;
-      
-      img {
-        border-radius: 50%;
-        border: 1px solid ${({theme})=>theme.COLORS.GRAY_200};
-        width: 16px;
-        height: 16px;
-      }
-
-      svg {
-        color: ${({theme})=>theme.COLORS.PINK};
-      }
-
-      p {
-        font-size: 16px;
-        font-weight: 400;
-      }
-    }
+    display: grid;
+    padding: 0px 123px ;
+    overflow-y: auto;
+    scrollbar-color: ${({theme})=>theme.COLORS.PINK} transparent;
   }
-
 `;
 
 export const ReturnButton = styled.div`
-  padding-left: 123px;
+  padding: 40px 123px 24px;
   display: flex;
   align-items: center;
 
@@ -70,8 +29,4 @@ export const ReturnButton = styled.div`
     color: ${({theme})=>theme.COLORS.PINK};
     margin-right: 8px;
   }
-`;
-
-export const Rating=styled.div`
-
 `;

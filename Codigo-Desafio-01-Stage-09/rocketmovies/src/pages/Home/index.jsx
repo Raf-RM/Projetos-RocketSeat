@@ -12,14 +12,14 @@ export function Home(){
   return(
     <Container>
       <Header />
+      <header>
+        <h1>Meus filmes</h1>
+        <a href="/">
+          <FiPlus/>
+          Adicionar filme
+        </a>
+      </header>
       <main>
-        <header>
-          <h1>Meus filmes</h1>
-          <a href="/">
-            <FiPlus/>
-            Adicionar filme
-          </a>
-        </header>
         <div>
           <MovieNote data={ 
             { 
