@@ -11,7 +11,7 @@ export function Header(){
       <Profile>
         <div>
           <span>Rafael Rodrigues Mateus</span>
-          <ButtonText label="sair"/>
+          <a href="/">sair</a>
         </div>
 
         <img src="https://github.com/Raf-RM.png" alt="Foto github usuário Raf-RM" />

@@ -9,7 +9,9 @@ export const Container = styled.div`
   > header {
     width: 100%;
     height: 144px;
+    display: flex;
     background-color: ${({theme})=>theme.COLORS.BROWN};
+    padding: 0 123px;
   }
 `;
 

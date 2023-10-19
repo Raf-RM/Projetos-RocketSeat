@@ -1,23 +1,18 @@
-import { Container, ReturnButton } from "./styles";
+import { Container } from "./styles";
 
 import { FiArrowLeft } from "react-icons/fi";
 
 import { Header } from '../../components/Header';
 import { MovieShowPreview } from '../../components/MovieShowPreview';
-
+import { ButtonText } from '../../components/ButtonText';
 
 export function MoviePreview(){
   return(
     <Container>
       <Header/>
-
-      <ReturnButton>
-      <FiArrowLeft/>        
-        <a href="/">
-          Voltar
-        </a>
-      </ReturnButton>
-
+      <div>
+        <ButtonText label='Voltar' icon={FiArrowLeft} rote='/' />
+      </div>
       <main>
         <div>
           <MovieShowPreview data={

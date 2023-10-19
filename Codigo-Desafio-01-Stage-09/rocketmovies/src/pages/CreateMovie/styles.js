@@ -7,6 +7,10 @@ export const Container = styled.div`
   grid-template-rows: 116px auto;
   padding-bottom: 40px;
 
+  > div {
+    margin: 40px 123px 24px;
+  }
+
   > main {
     display: grid;
     padding: 0 123px;
@@ -47,19 +51,3 @@ export const Form = styled.form`
   }
 `;
 
-export const ReturnButton = styled.div`
-  padding: 40px 123px;
-  display: flex;
-  align-items: center;
-
-  a {
-    font-size: 16px;
-    font-weight: 400;
-    color: ${({theme})=>theme.COLORS.PINK};    
-  }
-
-  svg {
-    color: ${({theme})=>theme.COLORS.PINK};
-    margin-right: 8px;
-  }
-`;

@@ -1,14 +1,16 @@
 import { Container, Form, Avatar } from "./styles";
-import { FiMail, FiLock, FiUser, FiCamera } from 'react-icons/fi';
+import { FiMail, FiLock, FiUser, FiCamera, FiArrowLeft } from 'react-icons/fi';
 
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
+import { ButtonText } from '../../components/ButtonText';
+
 
 export function Profile(){
   return(
     <Container>
       <header>
-        
+        <ButtonText label='Voltar' icon={FiArrowLeft} rote={'/'}/>
       </header>
       <Form>
 

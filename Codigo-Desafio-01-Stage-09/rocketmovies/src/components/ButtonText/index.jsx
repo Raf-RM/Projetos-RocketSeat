@@ -1,10 +1,12 @@
 import { Container } from "./styles";
 
-export function ButtonText({isActive=false, icon:Icon, label, ...rest}){
+export function ButtonText({isActive=false, icon:Icon, rote, label, ...rest}){
   return(
     <Container type="button" $isactive={isActive} {...rest} >
-      {Icon && <Icon/>}
-      {label}
+      <a href={rote.toString()}>
+        {Icon && <Icon/>}
+        {label}
+      </a>
     </Container>
   )
 }

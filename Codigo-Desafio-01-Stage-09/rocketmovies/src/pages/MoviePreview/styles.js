@@ -7,26 +7,14 @@ export const Container=styled.div`
   grid-template-rows: 116px auto;
   padding-bottom: 40px;
 
+  >div{
+    padding: 40px 123px 24px;
+  }
+
   > main {
     display: grid;
     padding: 0px 123px ;
     overflow-y: auto;
     scrollbar-color: ${({theme})=>theme.COLORS.PINK} transparent;
-  }
-`;
-
-export const ReturnButton = styled.div`
-  padding: 40px 123px 24px;
-  display: flex;
-  align-items: center;
-
-  >a{
-    font-size: 16px;
-    color: ${({theme})=>theme.COLORS.PINK};
-    font-weight: 400;
-  }
-  >svg{
-    color: ${({theme})=>theme.COLORS.PINK};
-    margin-right: 8px;
   }
 `;

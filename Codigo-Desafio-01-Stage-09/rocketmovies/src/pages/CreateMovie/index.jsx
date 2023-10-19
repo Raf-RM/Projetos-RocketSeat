@@ -1,6 +1,6 @@
 import {FiArrowLeft} from 'react-icons/fi';
 
-import { Container, Form, ReturnButton} from "./styles";
+import { Container, Form} from "./styles";
 
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
@@ -8,17 +8,15 @@ import { TextArea } from '../../components/TextArea';
 import { Button } from '../../components/Button';
 import { MovieItem } from '../../components/MovieItem';
 import { Section } from '../../components/Section';
+import { ButtonText } from '../../components/ButtonText';
 
 export function CreateMovie(){
   return(
     <Container>
       <Header/>
-      <ReturnButton>
-      <FiArrowLeft/>
-        <a href="/">
-          Voltar
-        </a>            
-      </ReturnButton>
+      <div>
+        <ButtonText label='Voltar' rote='/' icon={FiArrowLeft}/>        
+      </div>
       <main>
         <Form>
           <h1>Novo Filme</h1>

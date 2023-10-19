@@ -28,13 +28,20 @@ export const Profile=styled.div`
   //margin-right: 123px;
 
   > div {
+    display: flex;
+    flex-direction: column;
     text-align: end;
+
     
     > span {
       font-size: 14px;
       font-weight: bold;
       white-space: nowrap;
     }  
+
+    > a {
+      color: ${({theme})=>theme.COLORS.GRAY_100};
+    }
   }
 
   > img {
