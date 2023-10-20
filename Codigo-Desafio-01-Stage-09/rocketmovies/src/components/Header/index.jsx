@@ -1,7 +1,7 @@
 import { Container, Profile } from "./styles";
+import { Link } from 'react-router-dom';
 
 import { Input } from "../Input";
-import { ButtonText } from "../ButtonText";
 
 export function Header(){
   return(
@@ -14,7 +14,9 @@ export function Header(){
           <a href="/">sair</a>
         </div>
 
-        <img src="https://github.com/Raf-RM.png" alt="Foto github usuário Raf-RM" />
+        <Link to='/profile' >
+          <img src="https://github.com/Raf-RM.png" alt="Foto github usuário Raf-RM" />        
+        </Link>
       </Profile>
 
     </Container>

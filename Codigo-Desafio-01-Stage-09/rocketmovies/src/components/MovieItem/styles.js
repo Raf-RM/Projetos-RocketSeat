@@ -20,6 +20,7 @@ export const Container = styled.div`
   }
 
   > input {
+    font-family: 'Roboto', sans-serif;
     display:flex;
     height: 56px;
     width: 100%;

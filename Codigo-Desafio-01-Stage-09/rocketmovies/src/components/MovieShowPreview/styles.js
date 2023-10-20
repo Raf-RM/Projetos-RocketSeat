@@ -37,6 +37,7 @@ export const Container = styled.div`
     }
 
     p {
+      font-family: 'Roboto', sans-serif;
       font-size: 16px;
       font-weight: 400;
     }

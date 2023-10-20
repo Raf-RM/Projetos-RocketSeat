@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 
-export function ButtonText({isActive=false, icon:Icon, rote, label, ...rest}){
+export function ButtonText({isActive=false, icon:Icon, rote, label, to, ...rest}){
   return(
     <Container type="button" $isactive={isActive} {...rest} >
-      <a href={rote.toString()}>
+      <Link to={rote.toString()}>
         {Icon && <Icon/>}
         {label}
-      </a>
+      </Link>
     </Container>
   )
 }

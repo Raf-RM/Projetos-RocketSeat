@@ -44,13 +44,16 @@ export const Profile=styled.div`
     }
   }
 
-  > img {
-    border-radius: 50%;
-    border: 1px solid ${({theme})=>theme.COLORS.GRAY_100};
-    width: 64px;
-    height: 64px;
-    margin-left: 9px;
-  } 
+  > a {
+    > img {
+      border-radius: 50%;
+      border: 1px solid ${({theme})=>theme.COLORS.GRAY_100};
+      width: 64px;
+      height: 64px;
+      margin-left: 9px;
+    } 
+  }
+
 
 
 `;

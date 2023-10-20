@@ -24,7 +24,7 @@ export function SignIn(){
 
         <Button label='Entrar' />
 
-        <ButtonText label='Criar conta'  rote='/' />
+        <ButtonText label='Criar conta'  rote='/register' />
 
       </Form>
 

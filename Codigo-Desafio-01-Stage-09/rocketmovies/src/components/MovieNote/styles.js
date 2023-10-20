@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   width: 100%;
   height: 223px;
   border-radius: 16px;
@@ -14,6 +15,7 @@ export const Container = styled.div`
     font-weight: 700;
   }
   >p{
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
