@@ -15,6 +15,8 @@ export const Container=styled.header`
   margin-bottom: 40px;
 
   > h1 {
+    font-size: 24px;
+    font-weight: 700;
     margin-right: 64px;
     color: ${({theme})=>theme.COLORS.PINK};
   }

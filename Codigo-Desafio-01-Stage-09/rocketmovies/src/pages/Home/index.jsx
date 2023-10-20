@@ -11,7 +11,7 @@ export function Home(){
     <Container>
       <Header />
       <header>
-        <h1>Meus filmes</h1>
+        <h2>Meus filmes</h2>
         <Link to="/create">
           <FiPlus/>
           Adicionar filme

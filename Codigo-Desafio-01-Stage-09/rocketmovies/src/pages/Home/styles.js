@@ -13,7 +13,7 @@ export const Container = styled.div`
     justify-content: space-between;
     padding: 40px 123px;
 
-    >h1 {
+    >h2 {
       font-size: 32px;
       font-weight: 400;
     }
