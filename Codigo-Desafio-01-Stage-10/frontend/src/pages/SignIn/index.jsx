@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { useAuth } from "../../hooks/auth"; 
 
 import { Container, Form, Background } from "./styles";
@@ -9,8 +11,14 @@ import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
 
 export function SignIn(){
-  const data = useAuth();
-  console.log(data)
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { signIn } = useAuth();
+
+  function handleSignIn(){
+    signIn({email, password});
+  }
   
   return(
     <Container>
@@ -23,11 +31,24 @@ export function SignIn(){
         <h2>Faça seu Login</h2>
 
         <div>
-          <Input placeholder='E-mail' type='text' icon={FiMail} />
-          <Input placeholder='Senha' type='password' icon={FiLock} />
+          <Input 
+            placeholder='E-mail' 
+            type='text' 
+            icon={FiMail}
+            onChange={event => setEmail(event.target.value)}
+          />
+          <Input
+            placeholder='Senha' 
+            type='password' 
+            icon={FiLock}
+            onChange={event => setPassword(event.target.value)}
+          />
         </div>
 
-        <Button label='Entrar' />
+        <Button 
+          label='Entrar'
+          onClick={handleSignIn}
+        />
 
         <ButtonText label='Criar conta'  rote='/register' />
 
