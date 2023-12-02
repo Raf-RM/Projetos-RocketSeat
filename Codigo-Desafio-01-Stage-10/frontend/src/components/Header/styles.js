@@ -41,9 +41,16 @@ export const Profile=styled.div`
       white-space: nowrap;
     }  
 
-    > a {
-      color: ${({theme})=>theme.COLORS.GRAY_100};
+    > button {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      > a {
+        display: flex;
+        color: ${({theme})=>theme.COLORS.GRAY_100};
+      }
     }
+      
   }
 
   > a {
