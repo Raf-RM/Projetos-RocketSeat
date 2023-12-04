@@ -1,3 +1,7 @@
+import { useState } from "react";
+
+import { useAuth } from "../../hooks/auth";
+
 import { Container, Form, Avatar } from "./styles";
 import { FiMail, FiLock, FiUser, FiCamera, FiArrowLeft } from 'react-icons/fi';
 
@@ -7,6 +11,13 @@ import { ButtonText } from '../../components/ButtonText';
 
 
 export function Profile(){
+  const { user } = useAuth();
+
+  const [name, setName] = useState(user.name);
+  const [email, setEmail] = useState(user.email);
+  const [oldPassword, setOldPassword] = useState();
+  const [newPassword, setNewPassword] = useState();
+
   return(
     <Container>
       <header>
@@ -25,13 +36,35 @@ export function Profile(){
         </Avatar>
 
         <div>
-          <Input icon={FiUser} placeholder='Name' type='text' />
-          <Input icon={FiMail} placeholder='E-mail' type='text' />
+          <Input 
+            icon={FiUser} 
+            placeholder='Name' 
+            type='text' 
+            value={name}
+            onChange={event => setName(event.target.value)}
+          />
+          <Input
+            icon={FiMail}
+            placeholder='E-mail' 
+            type='text' 
+            value={email} 
+            onChange={event => setEmail(event.target.value)}
+          />
         </div>
 
         <div>
-          <Input icon={FiLock} placeholder='Senha atual' type='password' />
-          <Input icon={FiLock} placeholder='Nova senha' type='password' />
+          <Input 
+            icon={FiLock} 
+            placeholder='Senha atual' 
+            type='password' 
+            onChange={event => setOldPassword(event.target.value)}  
+          />
+          <Input 
+            icon={FiLock} 
+            placeholder='Nova senha' 
+            type='password'
+            onChange={event => setNewPassword(event.target.value)}
+          />
         </div>  
 
         <Button label='Salvar' />
