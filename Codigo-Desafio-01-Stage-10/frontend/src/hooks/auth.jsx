@@ -31,6 +31,21 @@ function AuthProvider({children}){
     setData({})
     }
 
+  async function updateProfile({user}){
+    try{
+      await api.put("/users", user)
+      localStorage.setItem("@RocketMovies:user", JSON.stringify(user))
+      setData({user, token: data.token})
+      alert("Perfil atualizado com sucesso!")
+    }catch(error){
+      if(error.response){
+        alert(error.response.data.message);
+      }else{
+        alert("Não foi possível atualizar o perfil.");
+      }
+    }
+  }
+
   useEffect(() => {
     const user = localStorage.getItem("@RocketMovies:user");
     const token = localStorage.getItem("@RocketMovies:token");
@@ -41,7 +56,7 @@ function AuthProvider({children}){
   },[]);
 
   return (
-    <AuthContext.Provider value={{signIn, signOut, user:data.user}}>
+    <AuthContext.Provider value={{signIn, signOut, user:data.user, updateProfile}}>
       {children}
     </AuthContext.Provider>
   )
