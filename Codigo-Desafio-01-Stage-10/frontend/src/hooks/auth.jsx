@@ -31,9 +31,16 @@ function AuthProvider({children}){
     setData({})
     }
 
-  async function updateProfile({user}){
+  async function updateProfile({user, avatarFile}){
 
     const { password, old_password, ...userData } = user;
+
+    if(avatarFile){
+      const fileUploadForm = new FormData();
+      fileUploadForm.append("avatar", avatarFile);
+      const response = await api.patch("/users/avatar", fileUploadForm);
+      user.avatar = response.data.avatar;
+    }
 
     try{
       await api.put("/users", userData);
