@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {FiArrowLeft} from 'react-icons/fi';
 
 import { Container, Form} from "./styles";
@@ -11,6 +13,22 @@ import { Section } from '../../components/Section';
 import { ButtonText } from '../../components/ButtonText';
 
 export function CreateMovie(){
+  const [title, setTitle] = useState("");
+  const [rating, setRating] = useState("");
+  const [description, setDescription] = useState("");
+
+  const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState("");
+
+  function handleAddTag(){
+    setTags(prevState => [...prevState, newTag]);
+    setNewTag("");
+  }
+
+  function handleRemoveTag(deleted){
+    setTags(prevState => prevState.filter(tag => tag !== deleted));
+  }
+
   return(
     <Container>
       <Header/>
@@ -27,10 +45,22 @@ export function CreateMovie(){
           <TextArea placeholder="Observações" />
           <Section title="Marcadores">
             <div className="tags">
-              <MovieItem  value="Terror"/>
-              <MovieItem  value="Suspense"/>
-              <MovieItem  value="Ficção"/>
-              <MovieItem placeholder="Novo marcador" isNew/>
+              {
+                tags.map((tag, index) => (
+                  <MovieItem
+                    key={String(index)}
+                    value={tag}
+                    onClick={() => handleRemoveTag(tag)}
+                  />
+                ))
+              }
+              <MovieItem 
+                placeholder="Novo marcador" 
+                isNew
+                value={newTag}
+                onChange={event => setNewTag(event.target.value)}
+                onClick={handleAddTag}
+              />
             </div>
           </Section>
           <div>
