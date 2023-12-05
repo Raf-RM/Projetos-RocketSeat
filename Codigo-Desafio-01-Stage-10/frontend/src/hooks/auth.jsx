@@ -32,11 +32,14 @@ function AuthProvider({children}){
     }
 
   async function updateProfile({user}){
+
+    const { password, old_password, ...userData } = user;
+
     try{
-      await api.put("/users", user)
-      localStorage.setItem("@RocketMovies:user", JSON.stringify(user))
-      setData({user, token: data.token})
-      alert("Perfil atualizado com sucesso!")
+      await api.put("/users", userData);
+      localStorage.setItem("@RocketMovies:user", JSON.stringify(userData));
+      setData({user, token: data.token});
+      alert("Perfil atualizado com sucesso!");
     }catch(error){
       if(error.response){
         alert(error.response.data.message);
