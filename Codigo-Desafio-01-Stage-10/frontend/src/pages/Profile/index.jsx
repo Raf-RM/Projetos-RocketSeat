@@ -26,13 +26,6 @@ export function Profile(){
   const [avatar, setAvatar] = useState(avatarURL);
   const [avatarFile, setAvatarFile] = useState(null);
 
-  function handleAvatarChange(event){
-    const file = event.target.files[0];
-    setAvatarFile(file);
-    const imagePreview = URL.createObjectURL(file);
-    setAvatar(imagePreview);
-  }
-
   async function handleUpdate(){
     const user = {
       name,
@@ -41,6 +34,13 @@ export function Profile(){
       old_password: oldPassword
     }
     await updateProfile({user, avatarFile});
+  }
+
+  function handleAvatarChange(event){
+    const file = event.target.files[0];
+    setAvatarFile(file);
+    const imagePreview = URL.createObjectURL(file);
+    setAvatar(imagePreview);
   }
 
   return(

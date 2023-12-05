@@ -33,16 +33,19 @@ function AuthProvider({children}){
 
   async function updateProfile({user, avatarFile}){
 
-    const { password, old_password, ...userData } = user;
-
-    if(avatarFile){
-      const fileUploadForm = new FormData();
-      fileUploadForm.append("avatar", avatarFile);
-      const response = await api.patch("/users/avatar", fileUploadForm);
-      user.avatar = response.data.avatar;
-    }
-
+    
+    
     try{
+      if(avatarFile){
+        const fileUploadForm = new FormData();
+        fileUploadForm.append("avatar", avatarFile);
+        
+        const response = await api.patch("/users/avatar", fileUploadForm);
+        user.avatar = response.data.avatar;
+      }
+
+      const { password, old_password, ...userData } = user;
+      
       await api.put("/users", userData);
       localStorage.setItem("@RocketMovies:user", JSON.stringify(userData));
       setData({user, token: data.token});
