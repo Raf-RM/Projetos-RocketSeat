@@ -3,7 +3,7 @@ import { IoMdStar, IoMdStarOutline} from 'react-icons/io';
 
 import { MovieTag } from '../MovieTag'
 
-export function MovieNote({ data, ...rest}){
+export function Movie({ data, ...rest}){
   return(
     <Container {...rest}>
       <h2>{data.title}</h2>
