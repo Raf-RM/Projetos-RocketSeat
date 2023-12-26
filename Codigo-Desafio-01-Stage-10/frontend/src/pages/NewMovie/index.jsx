@@ -40,6 +40,15 @@ export function NewMovie(){
     navigate("/");
   }
 
+  function handleRemoveMovie(){
+    setDescription("");
+    setRating("");
+    setTitle("");
+    setNewTag("");
+    setTags([]);
+    console.log(title, rating, description, tags, newTag)
+  }
+
   return(
     <Container>
       <Header/>
@@ -51,13 +60,16 @@ export function NewMovie(){
           <h1>Novo Filme</h1>
           <div>
             <Input placeholder="Título"
+              value={title}
               onChange={event => setTitle(event.target.value)}
             />
             <Input placeholder="Sua nota (de 0 a 5)"
+              value={rating}
               onChange={event => setRating(event.target.value)}
             />
           </div>
           <TextArea placeholder="Observações"
+            value={description}
             onChange={event => setDescription(event.target.value)}
           />
           <Section title="Marcadores">
@@ -81,7 +93,10 @@ export function NewMovie(){
             </div>
           </Section>
           <div>
-            <Button label="Excluir filme" />
+            <Button
+              label="Excluir filme"
+              onClick={handleRemoveMovie}
+            />
             <Button 
               label="Salvar alterações"
               onClick={handleNewMovie}
